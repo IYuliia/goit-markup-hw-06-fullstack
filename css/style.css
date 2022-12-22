@@ -488,36 +488,59 @@ address {
 .footer-form-label {
   display: block;
   font-weight: 700;
-font-size: 14px;
-line-height: 16px;
-letter-spacing: 0.03em;
-text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
-color: #FFFFFF;
- margin-top: 15px;
+  color: #ffffff;
+  margin-top: 15px;
   margin-bottom: 20px;
 }
 
 .form-input {
-  height: 40px;
+  height: 50px;
   width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-background-color: var(--primary-background-color);
-border-radius: 4px;
-padding-left: 16px;
-padding-top: 15px;
-padding-bottom: 15px;
+  background-color: var(--primary-background-color);
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: 12px;
+  outline: none;
+  color: #fff;
 }
 
-.footer-thumb-submit button {
+.footer-submit-button {
   width: 200px;
-height: 50px;
-background: var(--highlighting-color);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
-color: #fff;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--highlighting-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #fff;
+  border-color: transparent;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer-submit-button:hover,
+.footer-submit-button:focus {
+  color: var(--highlighting-color);
+  background-color: #ffffff;
+}
+
+.icon-send {
+  fill: currentColor;
+  margin-left: 30px;
+}
 
 .backdrop {
   position: fixed;
@@ -580,26 +603,26 @@ p.modal-title {
 .form-field {
   margin-bottom: 10px;
   color: var(--secondary-text-color);
-position: relative;
+  position: relative;
 }
 
 .modal-input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
-padding-left: 42px;
-padding-top: 11px;
-padding-bottom: 11px;
+  border-radius: 4px;
+  padding-left: 42px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .form-label {
   display: block;
   margin-bottom: 4px;
-font-weight: 400;
-font-size: 12px;
-line-height: 1.1;
-color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1;
+  color: var(--secondary-text-color);
 }
 
 .modal-icon {
@@ -609,7 +632,7 @@ color: var(--secondary-text-color);
   left: 12px;
 }
 
-.modal-input:focus~.modal-icon {
+.modal-input:focus ~ .modal-icon {
   border-radius: 4px;
   fill: var(--highlighting-color);
   border: var(--highlighting-color);
@@ -627,10 +650,10 @@ color: var(--secondary-text-color);
   height: 120px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
- font-weight: 400;
-font-size: 14px;
-line-height: 1.1;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
 }
 
 .modal-textarea:focus {
@@ -639,9 +662,28 @@ line-height: 1.1;
 }
 
 ::placeholder {
- 
   color: rgba(117, 117, 117, 0.5);
+}
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.form-field-terms {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: #757575;
+  margin-bottom: 30px;
 }
 
 label.modal-terms-label {
@@ -651,10 +693,11 @@ label.modal-terms-label {
 
 .modal-terms-customized {
   width: 16px;
-  height: 16px;
+  height: 15px;
   border: 2px solid #303030;
   border-radius: 2px;
   margin-right: 10px;
+  margin-left: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -680,7 +723,8 @@ label.modal-terms-label {
   line-height: 1.88;
   padding: 10px 80px;
 
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   text-align: center;
 
   color: #ffffff;
@@ -688,7 +732,7 @@ label.modal-terms-label {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -696,7 +740,6 @@ label.modal-terms-label {
 .modal-submit:focus {
   color: var(--highlighting-color);
   background-color: #ffffff;
-}
 }
 
 .filter-btn {
